@@ -1,0 +1,17 @@
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.DAL.deps.json
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.DAL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.DAL.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.AssemblyInfoInputs.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.AssemblyInfo.cs
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.csproj.CoreCompileInputs.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/refint/ToochiChat.DAL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ref/ToochiChat.DAL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.csproj.AssemblyReference.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.BL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.Domain.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.BL.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/bin/Debug/net8.0/ToochiChat.Domain.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.DAL/obj/Debug/net8.0/ToochiChat.DAL.csproj.CopyComplete

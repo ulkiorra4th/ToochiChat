@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.API", "ToochiChat.API\ToochiChat.API.csproj", "{9D6EBFD6-97EE-4BB1-AF11-9674FE422DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.Domain", "ToochiChat.Domain\ToochiChat.Domain.csproj", "{5D5980D3-5449-4701-87CF-4B1671319548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.Application", "ToochiChat.Application\ToochiChat.Application.csproj", "{B5058E66-9E81-4B48-9B5D-4447507BCDB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.Persistence", "ToochiChat.Persistence\ToochiChat.Persistence.csproj", "{3A3C4105-8095-4C7A-A041-F1E9DCA6139F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.Infrastructure", "ToochiChat.Infrastructure\ToochiChat.Infrastructure.csproj", "{CA284A02-0491-4D1E-A8CA-E05B7DD45E45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.Application.Tests", "ToochiChat.Application.Tests\ToochiChat.Application.Tests.csproj", "{59A29603-C0C6-4AAF-B480-43609EE7BFCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToochiChat.Infrastructure.Tests", "ToochiChat.Infrastructure.Tests\ToochiChat.Infrastructure.Tests.csproj", "{326E292F-7D0E-4F51-A09C-AF72369D17B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D6EBFD6-97EE-4BB1-AF11-9674FE422DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6EBFD6-97EE-4BB1-AF11-9674FE422DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6EBFD6-97EE-4BB1-AF11-9674FE422DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6EBFD6-97EE-4BB1-AF11-9674FE422DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5980D3-5449-4701-87CF-4B1671319548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5980D3-5449-4701-87CF-4B1671319548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5980D3-5449-4701-87CF-4B1671319548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5980D3-5449-4701-87CF-4B1671319548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5058E66-9E81-4B48-9B5D-4447507BCDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5058E66-9E81-4B48-9B5D-4447507BCDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5058E66-9E81-4B48-9B5D-4447507BCDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5058E66-9E81-4B48-9B5D-4447507BCDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3C4105-8095-4C7A-A041-F1E9DCA6139F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3C4105-8095-4C7A-A041-F1E9DCA6139F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3C4105-8095-4C7A-A041-F1E9DCA6139F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3C4105-8095-4C7A-A041-F1E9DCA6139F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA284A02-0491-4D1E-A8CA-E05B7DD45E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA284A02-0491-4D1E-A8CA-E05B7DD45E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA284A02-0491-4D1E-A8CA-E05B7DD45E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA284A02-0491-4D1E-A8CA-E05B7DD45E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A29603-C0C6-4AAF-B480-43609EE7BFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A29603-C0C6-4AAF-B480-43609EE7BFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A29603-C0C6-4AAF-B480-43609EE7BFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A29603-C0C6-4AAF-B480-43609EE7BFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{326E292F-7D0E-4F51-A09C-AF72369D17B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326E292F-7D0E-4F51-A09C-AF72369D17B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326E292F-7D0E-4F51-A09C-AF72369D17B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326E292F-7D0E-4F51-A09C-AF72369D17B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

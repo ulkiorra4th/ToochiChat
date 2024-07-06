@@ -1,0 +1,17 @@
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Infrastructure.deps.json
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Infrastructure.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Infrastructure.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.csproj.AssemblyReference.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.AssemblyInfoInputs.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.AssemblyInfo.cs
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/refint/ToochiChat.Infrastructure.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ref/ToochiChat.Infrastructure.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Domain.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Domain.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/obj/Debug/net8.0/ToochiChat.Infrastructure.csproj.CopyComplete
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Application.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/bin/Debug/net8.0/ToochiChat.Application.pdb
