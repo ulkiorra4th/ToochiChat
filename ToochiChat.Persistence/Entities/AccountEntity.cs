@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ToochiChat.Persistence.Entities;
 
@@ -11,7 +12,7 @@ public sealed class AccountEntity
     [Required, MaxLength()] public string? Salt { get; set; } 
     [Required] public bool IsEmailConfirmed { get; set; }
     [Required] public DateTime CreationDate { get; set; }
-    [Required] public string? UserInfoId { get; set; }
+    [ForeignKey(nameof(UserInfo))] public string? UserInfoId { get; set; }
     [Required] public UserEntity? UserInfo { get; set; }
     // TODO: make index
     public string? ConfirmationToken { get; set; }

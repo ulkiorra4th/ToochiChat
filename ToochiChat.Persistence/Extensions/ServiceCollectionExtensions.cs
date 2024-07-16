@@ -14,10 +14,9 @@ namespace ToochiChat.Persistence.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddDbContextAndRepositories(this IServiceCollection services, 
-        string connectionString)
+    public static IServiceCollection AddDbContextAndRepositories(this IServiceCollection services)
     {
-        services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
+        services.AddDbContext<ApplicationDbContext>();
 
         services.AddSingleton<IAccountRepository, AccountRepository>();
         services.AddSingleton<IChatRepository, ChatRepository>();

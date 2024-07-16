@@ -3013,19 +3013,21 @@
     ]
   },
   "packageFolders": {
-    "/Users/ulkiorra/.nuget/packages/": {}
+    "C:\\Users\\Рамин\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.API/ToochiChat.API.csproj",
+      "projectUniqueName": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.API\\ToochiChat.API.csproj",
       "projectName": "ToochiChat.API",
-      "projectPath": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.API/ToochiChat.API.csproj",
-      "packagesPath": "/Users/ulkiorra/.nuget/packages/",
-      "outputPath": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.API/obj/",
+      "projectPath": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.API\\ToochiChat.API.csproj",
+      "packagesPath": "C:\\Users\\Рамин\\.nuget\\packages\\",
+      "outputPath": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        "E:\\GitHubProjects\\ToochiChat\\NuGet.Config",
+        "C:\\Users\\Рамин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3037,14 +3039,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Application/ToochiChat.Application.csproj": {
-              "projectPath": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Application/ToochiChat.Application.csproj"
+            "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Application\\ToochiChat.Application.csproj": {
+              "projectPath": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Application\\ToochiChat.Application.csproj"
             },
-            "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
-              "projectPath": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj"
+            "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj": {
+              "projectPath": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj"
             },
-            "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Persistence/ToochiChat.Persistence.csproj": {
-              "projectPath": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Persistence/ToochiChat.Persistence.csproj"
+            "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Persistence\\ToochiChat.Persistence.csproj": {
+              "projectPath": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Persistence\\ToochiChat.Persistence.csproj"
             }
           }
         }
@@ -3053,6 +3055,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3103,7 +3110,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

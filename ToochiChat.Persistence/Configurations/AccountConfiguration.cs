@@ -18,11 +18,11 @@ internal sealed class AccountConfiguration : IEntityTypeConfiguration<AccountEnt
 
         builder.Property(a => a.PasswordHash)
             .IsRequired()
-            .HasMaxLength(000000000000000000000000000000000000); // TODO: change
+            .HasMaxLength(86); // TODO: change
 
         builder.Property(a => a.Salt)
             .IsRequired()
-            .HasMaxLength(000000000000000000000000000000000000); // TODO: change
+            .HasMaxLength(86); // TODO: change
 
         builder.Property(a => a.CreationDate)
             .IsRequired();
@@ -30,8 +30,8 @@ internal sealed class AccountConfiguration : IEntityTypeConfiguration<AccountEnt
         builder.Property(a => a.IsEmailConfirmed)
             .IsRequired();
 
-        builder.Property(a => a.UserInfo)
-            .IsRequired();
+        // builder.Property(a => a.UserInfo)
+        //     .IsRequired();
 
         builder.HasOne(a => a.UserInfo)
             .WithOne(u => u.Account);

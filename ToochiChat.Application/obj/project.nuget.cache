@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2UDdg69VRmom9+qzPCziaWEyBkVovewTpXsUZEx7qu3hzltL0+j4wPylqYUCGKFOVrbHSuQ88CzTrkAPY9hYjQ==",
+  "dgSpecHash": "AFrG1uo+55w3Ine80qL2ALB/ExbVPbPUzFJ3MqT9sc1Zdo/JVVNQlj+7NkRm1H7+f4pLNhRCaE9KmccIfduQTQ==",
   "success": true,
-  "projectFilePath": "/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Application/ToochiChat.Application.csproj",
+  "projectFilePath": "E:\\GitHubProjects\\ToochiChat\\ToochiChat.Application\\ToochiChat.Application.csproj",
   "expectedPackageFiles": [
-    "/Users/ulkiorra/.nuget/packages/csharpfunctionalextensions/2.41.0/csharpfunctionalextensions.2.41.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\Рамин\\.nuget\\packages\\csharpfunctionalextensions\\2.41.0\\csharpfunctionalextensions.2.41.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

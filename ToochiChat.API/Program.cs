@@ -29,7 +29,7 @@ builder.Services.AddApplicationServices();
 
 #region Persistence
 
-builder.Services.AddDbContextAndRepositories(builder.Configuration.GetConnectionString("Postgres")!);
+builder.Services.AddDbContextAndRepositories();
 builder.Services.AddPersistenceMappers();
 
 #endregion
@@ -37,7 +37,7 @@ builder.Services.AddPersistenceMappers();
 #region Infrastructure Services
 
 var configFilePath =
-    @"/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.Infrastructure/EmailService/Data/config.json";
+    @"E:\GitHubProjects\ToochiChat\ToochiChat.Infrastructure\EmailService\Data\config.json";
 builder.Services.AddEmailService(configFilePath);
 builder.Services.AddPasswordSecurityService();
 builder.Services.AddJwtTokens(builder.Configuration);

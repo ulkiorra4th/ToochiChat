@@ -19,11 +19,11 @@ internal sealed class MessageConfiguration : IEntityTypeConfiguration<MessageEnt
             .IsRequired()
             .HasMaxLength(MAX_CONTENT_LENGTH);
 
-        builder.Property(m => m.Chat)
-            .IsRequired();
+        // builder.Property(m => m.Chat)
+        //     .IsRequired();
 
-        builder.Property(m => m.Sender)
-            .IsRequired();
+        // builder.Property(m => m.Sender)
+        //     .IsRequired();
 
         builder.HasOne(m => m.Chat)
             .WithMany(c => c.Messages);
