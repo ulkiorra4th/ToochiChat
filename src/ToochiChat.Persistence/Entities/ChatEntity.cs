@@ -1,0 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace ToochiChat.Persistence.Entities;
+
+// TODO: finish entity
+public sealed class ChatEntity
+{
+    [Key, MaxLength()] public string? Id { get; set; }
+    [Required, MaxLength(50)] public string? Title { get; set; }
+    [Required] public DateTime CreationDate { get; set; }
+    [Required] public ICollection<UserEntity>? Members { get; set; }
+    [Required] public ICollection<MessageEntity>? Messages { get; set; }
+}

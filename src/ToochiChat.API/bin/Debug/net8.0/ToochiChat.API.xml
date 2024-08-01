@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToochiChat.API</name>
+    </assembly>
+    <members>
+        <member name="M:ToochiChat.API.Controllers.AccountController.GetUser(System.String)">
+            <summary>
+            Gets the user
+            </summary>
+            <param name="id">Id of the user</param>
+            <returns>User</returns>
+        </member>
+        <member name="M:ToochiChat.API.Controllers.AccountController.Login(ToochiChat.API.RequestModels.LoginRequestModel)">
+            <summary>
+            Logs in the user
+            </summary>
+            <param name="request">Login model</param>
+            <returns>JWT token in cookies</returns>
+        </member>
+        <member name="M:ToochiChat.API.Controllers.AccountController.Register(ToochiChat.API.RequestModels.RegisterRequestModel)">
+            <summary>
+            Registers the user
+            </summary>
+            <param name="request">Register model</param>
+            <returns>JWT token in cookies</returns>
+        </member>
+    </members>
+</doc>
