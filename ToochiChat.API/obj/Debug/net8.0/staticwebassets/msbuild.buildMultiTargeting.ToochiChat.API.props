@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\ToochiChat.API.props" />
-</Project>
