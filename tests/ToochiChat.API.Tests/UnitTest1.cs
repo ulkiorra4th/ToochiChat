@@ -1,4 +1,4 @@
-namespace ToochiChat.Application.Tests;
+namespace ToochiChat.API.Tests;
 
 public class UnitTest1
 {

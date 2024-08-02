@@ -6,7 +6,7 @@ namespace ToochiChat.Domain.Models.Auth;
 
 public sealed class Account
 {
-    public string Id { get; }
+    public Guid Id { get; }
     public string Email { get; } 
     public string Password { get; }
     public string Salt { get; }
@@ -16,7 +16,7 @@ public sealed class Account
     
     public DateTime CreationDate { get; }
 
-    private Account(string id, string email, string password, string salt, 
+    private Account(Guid id, string email, string password, string salt, 
         string emailConfirmationToken, User userInfo, DateTime creationDate)
     {
         Id = id;
@@ -28,10 +28,10 @@ public sealed class Account
         CreationDate = creationDate;
     }
 
-    public static Result<Account> Create(string id, string email, string password, string salt, 
+    public static Result<Account> Create(Guid id, string email, string password, string salt, 
         string emailConfirmationToken, User userInfo)
     {
-        if (String.IsNullOrEmpty(id))
+        if (id.Equals(Guid.Empty))
             return Result.Failure<Account>($"{nameof(id)} is required");
         
         if (!Regex.Match(email, AuthConstants.EmailRegex).Success) 

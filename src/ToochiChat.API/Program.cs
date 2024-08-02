@@ -36,8 +36,7 @@ builder.Services.AddPersistenceMappers();
 
 #region Infrastructure Services
 
-var configFilePath =
-    @"E:\GitHubProjects\ToochiChat\ToochiChat.Infrastructure\EmailService\Data\config.json";
+var configFilePath = @"..\EmailService\Data\config.json";
 builder.Services.AddEmailService(configFilePath);
 builder.Services.AddPasswordSecurityService();
 builder.Services.AddJwtTokens(builder.Configuration);

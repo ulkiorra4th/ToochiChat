@@ -21,7 +21,7 @@ internal sealed class JwtProvider : IJwtProvider
     {
         Claim[] claims = 
         {
-            new("accountId", account.Id), 
+            new("accountId", account.Id.ToString()), 
             new("accountEmail", account.Email),
             new("emailConfirmationState", account.IsEmailConfirmed.ToString())
         };

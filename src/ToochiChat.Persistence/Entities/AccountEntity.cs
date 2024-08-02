@@ -6,7 +6,7 @@ namespace ToochiChat.Persistence.Entities;
 // TODO: Set MaxLengths
 public sealed class AccountEntity
 {
-    [Key] public string? Id { get; set; }
+    [Key] public Guid Id { get; set; }
     [EmailAddress] public string? Email { get; set; }
     [Required, MaxLength()] public string? PasswordHash { get; set; }
     [Required, MaxLength()] public string? Salt { get; set; } 

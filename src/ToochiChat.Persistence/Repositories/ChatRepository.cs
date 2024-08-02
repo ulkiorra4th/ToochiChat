@@ -33,7 +33,7 @@ internal sealed class ChatRepository : IChatRepository
         _scopeFactory = scopeFactory;
     }
 
-    public async Task<Result<Chat>> GetChatById(string id)
+    public async Task<Result<Chat>> GetChatById(Guid id)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -47,7 +47,7 @@ internal sealed class ChatRepository : IChatRepository
         return Result.Success(_chatMapper.MapFrom(chatEntity));
     }
 
-    public async Task<Result<Chat>> GetChatWithMembersById(string id)
+    public async Task<Result<Chat>> GetChatWithMembersById(Guid id)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -62,7 +62,7 @@ internal sealed class ChatRepository : IChatRepository
         return Result.Success(_chatMapper.MapFrom(chatEntity));
     }
 
-    public async Task<Result<string>> Create(Chat chat)
+    public async Task<Result<Guid>> Create(Chat chat)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -75,7 +75,7 @@ internal sealed class ChatRepository : IChatRepository
         return Result.Success(chat.Id)!;
     }
 
-    public async Task<Result> UpdateChatById(string id, Chat updatedChat)
+    public async Task<Result> UpdateChatById(Guid id, Chat updatedChat)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -107,7 +107,7 @@ internal sealed class ChatRepository : IChatRepository
         return Result.Success();
     }
 
-    public async Task<Result> DeleteChatById(string id)
+    public async Task<Result> DeleteChatById(Guid id)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();

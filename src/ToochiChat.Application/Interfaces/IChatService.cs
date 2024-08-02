@@ -6,8 +6,8 @@ namespace ToochiChat.Application.Interfaces;
 
 public interface IChatService
 {
-   Task<Result<Chat>> GetChatById(string id);
+   Task<Result<Chat>> GetChatById(Guid id);
    Task<Result> SendMessageFrom(string accountId, string chatId, Message message);
-   Task<Result<IReadOnlyCollection<User>>> GetChatMembers(string chatId);
+   Task<Result<IReadOnlyCollection<User>>> GetChatMembers(Guid chatId);
    Task<Result> AddChatMember(string accountId, string chatId);
 }

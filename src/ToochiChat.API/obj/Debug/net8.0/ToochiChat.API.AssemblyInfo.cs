@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToochiChat.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a49df59605dfed289396a0b384c6da77732da6a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dd400c56a394dfd651cf71816957018cda92431")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToochiChat.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToochiChat.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

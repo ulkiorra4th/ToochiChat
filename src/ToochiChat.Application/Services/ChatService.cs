@@ -15,7 +15,7 @@ public sealed class ChatService : IChatService
         _chatRepository = chatRepository;
     }
 
-    public async Task<Result<Chat>> GetChatById(string id)
+    public async Task<Result<Chat>> GetChatById(Guid id)
     {
         return await _chatRepository.GetChatById(id);
     }
@@ -25,7 +25,7 @@ public sealed class ChatService : IChatService
         throw new NotImplementedException();
     }
 
-    public async Task<Result<IReadOnlyCollection<User>>> GetChatMembers(string chatId)
+    public async Task<Result<IReadOnlyCollection<User>>> GetChatMembers(Guid chatId)
     {
         var chatResult = await _chatRepository.GetChatWithMembersById(chatId);
         

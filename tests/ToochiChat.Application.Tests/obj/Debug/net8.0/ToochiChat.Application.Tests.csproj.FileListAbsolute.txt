@@ -215,8 +215,6 @@ E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Application.Tests.pdb
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -307,3 +305,18 @@ E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\obj\Debug\net8.0
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\obj\Debug\net8.0\ToochiChat.Application.Tests.pdb
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\obj\Debug\net8.0\ToochiChat.Application.Tests.genruntimeconfig.cache
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\obj\Debug\net8.0\ref\ToochiChat.Application.Tests.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_ToochiChat.Application.Tests
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Application.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Domain.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Application.pdb
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Domain.pdb
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Infrastructure.dll
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Infrastructure.pdb

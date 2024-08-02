@@ -9,21 +9,21 @@ public sealed class Chat
     private readonly List<Message> _messages = new();
     private readonly List<User> _members = new();
     
-    public string Id { get; }
+    public Guid Id { get; }
     public string Title { get; private set; }
     public DateTime CreationDate { get; }
     
     public IReadOnlyCollection<Message> Messages => _messages;
     public IReadOnlyCollection<User> Members => _members;
 
-    private Chat(string id, string title, DateTime creationDate)
+    private Chat(Guid id, string title, DateTime creationDate)
     {
         Id = id;
         Title = title;
         CreationDate = creationDate;
     }
 
-    public static Result<Chat> Create(string id, string title, DateTime creationDate)
+    public static Result<Chat> Create(Guid id, string title, DateTime creationDate)
     {
         if (title.Length is > ChatConstants.MaxTitleLength or <= default(int)) 
             return Result.Failure<Chat>($"{nameof(title)} should be lt {ChatConstants.MaxTitleLength}");

@@ -1,6 +1,5 @@
 using System.Text.RegularExpressions;
 using CSharpFunctionalExtensions;
-using Microsoft.Extensions.Logging;
 using ToochiChat.Application.Auth.Interfaces;
 using ToochiChat.Application.Auth.Interfaces.Infrastructure;
 using ToochiChat.Application.Interfaces.Infrastructure;
@@ -12,17 +11,14 @@ namespace ToochiChat.Application.Auth.Services;
 
 public sealed class AccountService : IAccountService
 {
-    private readonly ILogger<AccountService> _logger;
     private readonly IPasswordSecurityService _passwordSecurityService;
     private readonly IAccountRepository _accountRepository;
     private readonly IEmailConfirmationService _emailConfirmationService;
     private readonly IJwtProvider _jwtProvider;
     
-    public AccountService(ILogger<AccountService> logger, IAccountRepository accountRepository, 
-        IEmailConfirmationService emailConfirmationService, IJwtProvider jwtProvider, 
-        IPasswordSecurityService passwordSecurityService)
+    public AccountService(IAccountRepository accountRepository, IEmailConfirmationService emailConfirmationService, 
+        IJwtProvider jwtProvider, IPasswordSecurityService passwordSecurityService)
     {
-        _logger = logger;
         _accountRepository = accountRepository;
         _emailConfirmationService = emailConfirmationService;
         _jwtProvider = jwtProvider;
@@ -45,13 +41,12 @@ public sealed class AccountService : IAccountService
         var salt = _passwordSecurityService.GenerateSalt();
         var hashedPassword = _passwordSecurityService.HashPassword(password, salt);
         var confirmationToken = _emailConfirmationService.GenerateConfirmationToken();
-        var accountResult = Account.Create(Guid.NewGuid().ToString(), email, hashedPassword, salt, 
+        var accountResult = Account.Create(Guid.NewGuid(), email, hashedPassword, salt, 
             confirmationToken, userInfoResult.Value); 
         
         if (accountResult.IsFailure) return Result.Failure<string>("invalid data");
 
-        var accountCreationResult =  
-            await _accountRepository.Create(accountResult.Value);
+        var accountCreationResult = await _accountRepository.Create(accountResult.Value);
         if (accountCreationResult.IsFailure) return Result.Failure<string>("Account wasn't saved in DB");
         
         _emailConfirmationService.SendConfirmationEmail(email, confirmationToken);
@@ -69,7 +64,7 @@ public sealed class AccountService : IAccountService
             return Result.Failure<string>("email or password is incorrect");
         
         var token = _jwtProvider.GenerateToken(account);
-        return token;
+        return Result.Success(token);
     }
 
     private async Task<bool> Exists(string email)

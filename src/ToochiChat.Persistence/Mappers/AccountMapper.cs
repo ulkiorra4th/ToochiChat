@@ -16,7 +16,7 @@ public class AccountMapper : IMapper<Account, AccountEntity>, ICollectionMapper<
     
     public Account MapFrom(AccountEntity other)
     {
-        return Account.Create(other.Id!, other.Email!, other.PasswordHash!, other.Salt!,
+        return Account.Create(other.Id, other.Email!, other.PasswordHash!, other.Salt!,
             other.ConfirmationToken!, _userMapper.MapFrom(other.UserInfo!)).Value!;
     }
 

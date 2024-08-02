@@ -6,9 +6,9 @@ namespace ToochiChat.Infrastructure.Authentication;
 
 internal sealed class PasswordSecurityService : IPasswordSecurityService
 {
-    private const int SALT_BYTE_ARRAY_LENGTH = 26;
-    private const int ITERATION_COUNT = 5000;
-    private const int NUM_BYTES_REQUESTED = 64;
+    private const int SaltByteArrayLength = 26;
+    private const int IterationCount = 5000;
+    private const int NumBytesRequested = 64;
     
     private readonly RandomNumberGenerator _randomNumberGenerator;
 
@@ -23,8 +23,8 @@ internal sealed class PasswordSecurityService : IPasswordSecurityService
             password,
             System.Text.Encoding.ASCII.GetBytes(salt),
             KeyDerivationPrf.HMACSHA512,
-            ITERATION_COUNT,
-            NUM_BYTES_REQUESTED
+            IterationCount,
+            NumBytesRequested
         ));
     }
 
@@ -35,7 +35,7 @@ internal sealed class PasswordSecurityService : IPasswordSecurityService
     
     public string GenerateSalt()
     {
-        var encBytes = new byte[SALT_BYTE_ARRAY_LENGTH];
+        var encBytes = new byte[SaltByteArrayLength];
         _randomNumberGenerator.GetBytes(encBytes);
 
         return Convert.ToBase64String(encBytes);

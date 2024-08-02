@@ -18,7 +18,6 @@ internal sealed class AccountRepository : IAccountRepository
     private readonly IMapper<Account, AccountEntity> _accountMapper;
     private readonly ICollectionMapper<Account, AccountEntity> _accountCollectionMapper;
 
-
     public AccountRepository(IMapper<User, UserEntity> userMapper, IMapper<Account, AccountEntity> accountMapper, 
         ICollectionMapper<Account, AccountEntity> accountCollectionMapper, IServiceScopeFactory scopeFactory)
     {
@@ -28,7 +27,7 @@ internal sealed class AccountRepository : IAccountRepository
         _scopeFactory = scopeFactory;
     }
 
-    public async Task<Result<Account>> GetAccountById(string id)
+    public async Task<Result<Account>> GetAccountById(Guid id)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -41,7 +40,7 @@ internal sealed class AccountRepository : IAccountRepository
         return Result.Success(_accountMapper.MapFrom(accountEntity));
     }
 
-    public async Task<Result<Account>> GetAccountWithUserById(string id)
+    public async Task<Result<Account>> GetAccountWithUserById(Guid id)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -82,7 +81,7 @@ internal sealed class AccountRepository : IAccountRepository
         return Result.Success(_accountMapper.MapFrom(accountEntity));
     }
 
-    public async Task<Result<string>> Create(Account account)
+    public async Task<Result<Guid>> Create(Account account)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -95,7 +94,7 @@ internal sealed class AccountRepository : IAccountRepository
         return Result.Success(accountEntity.Id)!;
     }
 
-    public async Task<Result> UpdateAccountById(string id, Account updatedAccount)
+    public async Task<Result> UpdateAccountById(Guid id, Account updatedAccount)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -116,7 +115,7 @@ internal sealed class AccountRepository : IAccountRepository
         return Result.Success();
     }
 
-    public async Task<Result> DeleteAccountById(string id)
+    public async Task<Result> DeleteAccountById(Guid id)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
