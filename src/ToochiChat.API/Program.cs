@@ -36,8 +36,7 @@ builder.Services.AddPersistenceMappers();
 
 #region Infrastructure Services
 
-var configFilePath = @"..\EmailService\Data\config.json";
-builder.Services.AddEmailService(configFilePath);
+builder.Services.AddEmailService(builder.Configuration);
 builder.Services.AddPasswordSecurityService();
 builder.Services.AddJwtTokens(builder.Configuration);
 

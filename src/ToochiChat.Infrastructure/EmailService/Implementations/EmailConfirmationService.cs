@@ -1,28 +1,26 @@
-using System.Security.Cryptography;
+using Microsoft.Extensions.Configuration;
 using ToochiChat.Application.Interfaces.Infrastructure;
-using ToochiChat.Infrastructure.EmailService.Data;
 using ToochiChat.Infrastructure.EmailService.Interfaces;
+using ToochiChat.Infrastructure.Extensions;
 
 namespace ToochiChat.Infrastructure.EmailService.Implementations;
 
 internal sealed class EmailConfirmationService : IEmailConfirmationService
 {
-    private readonly Configuration _config;
     private readonly IEmailContentBuilder _emailContentBuilder;
     private readonly IEmailSender _emailSender;
+    private readonly IConfiguration _configuration;
 
     public EmailConfirmationService(IEmailContentBuilder emailContentBuilder, IEmailSender emailSender, 
-        Configuration config)
+        IConfiguration configuration)
     {
         _emailContentBuilder = emailContentBuilder;
         _emailSender = emailSender;
-        _config = config;
+        _configuration = configuration;
     }
 
-    public string GenerateConfirmationToken()
-    {
-        return Guid.NewGuid().ToString();
-    }
+    public string GenerateConfirmationToken() => Guid.NewGuid().ToString();
+
     
     public void ConfirmEmail(int id)
     {
@@ -31,22 +29,15 @@ internal sealed class EmailConfirmationService : IEmailConfirmationService
 
     public void SendConfirmationEmail(string email, string confirmationToken)
     {
-        var confirmationUrl = BuildUrl(_config.Domain, _config.Controller, _config.Action, email, confirmationToken);
-        var emailContent = _emailContentBuilder.BuildMailContentFromHtml(_config.HtmlFilePath, confirmationUrl);
+        var confirmationUrl = BuildUrl(_configuration.GetDomainName()!, _configuration.GetControllerName()!, 
+            _configuration.GetActionName()!, email, confirmationToken);
+        var emailContent = _emailContentBuilder.BuildMailContentFromHtml(_configuration.GetEmailHtmlFilePath()!,
+            confirmationUrl);
         
         _emailSender.SendMailAsync(email, emailContent);
     }
     
-    private string BuildUrl(string domain, string controller, string action, string email, string token)
-    {
-        string hashedEmail;
-        
-        using (HashAlgorithm sha256 = SHA256.Create())
-        {
-            var result = sha256.ComputeHash(System.Text.Encoding.ASCII.GetBytes(email));
-            hashedEmail = Convert.ToString(result)!;
-        }
-
-        return $"{domain}/{controller}/{action}/{hashedEmail}/{token}";
-    }
+    // TODO: Use code, not url
+    private string BuildUrl(string domain, string controller, string action, string email, string token) =>
+        $"{domain}/{controller}/{action}/{email.GetHashCode()}/{token}";
 }

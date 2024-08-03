@@ -1,5 +1,4 @@
 using System.Text;
-using ToochiChat.Infrastructure.EmailService.Implementations.Content.Data;
 using ToochiChat.Infrastructure.EmailService.Interfaces;
 
 namespace ToochiChat.Infrastructure.EmailService.Implementations.Content;
@@ -9,7 +8,6 @@ internal sealed class EmailContentBuilder : IEmailContentBuilder
     private readonly IHtmlParser _htmlParser;
     
     public char InsertLinkSymbol { get; set; }
-    
     public string Separator { get; set; }
 
     public EmailContentBuilder(IHtmlParser htmlParser)
@@ -47,7 +45,7 @@ internal sealed class EmailContentBuilder : IEmailContentBuilder
         
         var sb = new StringBuilder(body);
         
-        sb.Insert(insertSymbolIndex + 1, $"\"{confirmationLink}\"");
+        sb.Insert(insertSymbolIndex + 1, $"{confirmationLink}");
         sb.Remove(insertSymbolIndex, 1);
 
         return sb.ToString();

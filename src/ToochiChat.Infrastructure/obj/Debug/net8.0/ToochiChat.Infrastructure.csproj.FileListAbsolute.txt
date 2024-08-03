@@ -51,3 +51,4 @@ E:\GitHubProjects\ToochiChat\src\ToochiChat.Infrastructure\obj\Debug\net8.0\Tooc
 E:\GitHubProjects\ToochiChat\src\ToochiChat.Infrastructure\obj\Debug\net8.0\refint\ToochiChat.Infrastructure.dll
 E:\GitHubProjects\ToochiChat\src\ToochiChat.Infrastructure\obj\Debug\net8.0\ToochiChat.Infrastructure.pdb
 E:\GitHubProjects\ToochiChat\src\ToochiChat.Infrastructure\obj\Debug\net8.0\ref\ToochiChat.Infrastructure.dll
+E:\GitHubProjects\ToochiChat\src\ToochiChat.Infrastructure\bin\Debug\net8.0\EmailService\Data\email_template.html

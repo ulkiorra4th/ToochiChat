@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "4JBPDwKQ3eVIhuY/isXhrRCVwABnmSM9I6DEnBSgguUzAy0KOLk2vRxzOQ8OSp8AcNdRLqoqB/gaoNMscm2ucg==",
+  "dgSpecHash": "af0BI6E3Ugg1t9XyIRwdb+hqCvzyHowM2taEI31g0a/2tanfBWgfq5ASAzxsUtigcQPxHrJed4EodzSAyLKzNg==",
   "success": true,
   "projectFilePath": "E:\\GitHubProjects\\ToochiChat\\tests\\ToochiChat.API.Tests\\ToochiChat.API.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Рамин\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.aspnetcore.testhost\\8.0.0\\microsoft.aspnetcore.testhost.8.0.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -48,6 +51,7 @@
     "C:\\Users\\Рамин\\.nuget\\packages\\system.io.compression.zipfile\\4.3.0\\system.io.compression.zipfile.4.3.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Рамин\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",

@@ -6,10 +6,8 @@ using Newtonsoft.Json.Linq;
 using ToochiChat.Application.Auth.Interfaces.Infrastructure;
 using ToochiChat.Application.Interfaces.Infrastructure;
 using ToochiChat.Infrastructure.Authentication;
-using ToochiChat.Infrastructure.EmailService.Data;
 using ToochiChat.Infrastructure.EmailService.Implementations;
 using ToochiChat.Infrastructure.EmailService.Implementations.Content;
-using ToochiChat.Infrastructure.EmailService.Implementations.Content.Data;
 using ToochiChat.Infrastructure.EmailService.Implementations.Net;
 using ToochiChat.Infrastructure.EmailService.Interfaces;
 
@@ -17,19 +15,19 @@ namespace ToochiChat.Infrastructure.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddEmailService(this IServiceCollection services, string configFilePath)
+    public static IServiceCollection AddEmailService(this IServiceCollection services,  IConfiguration configuration)
     {
-        services.AddSingleton<Configuration>(o => 
-            new Configuration(JObject.Parse(File.ReadAllText(configFilePath))));
+        var emailSenderConfiguration = configuration.GetEmailSenderConfiguration();
         
         services.AddSingleton<IHtmlParser, HtmlParser>();
         services.AddSingleton<IEmailContentBuilder, EmailContentBuilder>();
         
-        // TODO: read from configuration file
-        services.AddSingleton(new EmailSender("address@gmail.com", "name", "password", 
-            "smtpHost", 0000));
-        
-        services.AddSingleton<IEmailSender>(services => services.GetService<EmailSender>()!);
+        services.AddSingleton<IEmailSender>(new EmailSender(
+            emailSenderConfiguration.GetValue<string>("SenderAddress")!, 
+              emailSenderConfiguration.GetValue<string>("DisplayName")!, 
+              emailSenderConfiguration.GetValue<string>("SenderMailPassword")!, 
+            emailSenderConfiguration.GetValue<string>("SmtpHost")!, 
+              emailSenderConfiguration.GetValue<int>("SmtpPort")));
         
         services.AddSingleton<IEmailConfirmationService, EmailConfirmationService>();
 

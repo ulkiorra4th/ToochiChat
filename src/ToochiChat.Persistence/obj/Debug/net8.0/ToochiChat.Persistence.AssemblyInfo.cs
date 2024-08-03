@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToochiChat.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dd400c56a394dfd651cf71816957018cda92431")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d02a2c61cdb484f5a365eec7020316ed2255b577")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToochiChat.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToochiChat.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

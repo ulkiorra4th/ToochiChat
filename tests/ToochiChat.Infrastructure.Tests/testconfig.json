@@ -1,0 +1,21 @@
+{
+  "EmailConfirmationService":
+  {
+    "TestData": {
+      "ReceiverAddress": "ramin.muhtarov@gmail.com"
+    },
+    "Domain": "https://localhost:3000/",
+    "Controller": "account",
+    "Action": "email-confirmation",
+
+    "HtmlFilePath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\EmailService\\Data\\email_template.html",
+
+    "EmailSenderConfiguration": {
+      "SenderAddress": "ramin.muhtarov@gmail.com",
+      "DisplayName": "ToochiChat",
+      "SenderMailPassword": "mqzd uylk jtth iaxg",
+      "SmtpHost": "smtp.gmail.com",
+      "SmtpPort": 587
+    }
+  }
+}

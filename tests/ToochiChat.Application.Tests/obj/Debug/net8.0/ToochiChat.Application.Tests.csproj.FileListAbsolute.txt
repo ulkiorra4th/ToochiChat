@@ -320,3 +320,4 @@ E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Infrastructure.dll
 E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\ToochiChat.Infrastructure.pdb
+E:\GitHubProjects\ToochiChat\tests\ToochiChat.Application.Tests\bin\Debug\net8.0\EmailService\Data\email_template.html
