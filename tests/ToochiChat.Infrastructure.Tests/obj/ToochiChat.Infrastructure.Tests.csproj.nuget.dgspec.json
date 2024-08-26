@@ -1,0 +1,726 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Infrastructure.Tests/ToochiChat.Infrastructure.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.API/ToochiChat.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.API/ToochiChat.API.csproj",
+        "projectName": "ToochiChat.API",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.API/ToochiChat.API.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Sinks.Elasticsearch": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "SignalRSwaggerGen": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj",
+        "projectName": "ToochiChat.Application",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj",
+        "projectName": "ToochiChat.Domain",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[2.41.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj",
+        "projectName": "ToochiChat.Infrastructure",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj",
+        "projectName": "ToochiChat.Persistence.FileSystem",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Mongo/ToochiChat.Persistence.Mongo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Mongo/ToochiChat.Persistence.Mongo.csproj",
+        "projectName": "ToochiChat.Persistence.Mongo",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Mongo/ToochiChat.Persistence.Mongo.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Mongo/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.28.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj",
+        "projectName": "ToochiChat.Persistence.Postgres",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[2.41.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Infrastructure.Tests/ToochiChat.Infrastructure.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Infrastructure.Tests/ToochiChat.Infrastructure.Tests.csproj",
+        "projectName": "ToochiChat.Infrastructure.Tests",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Infrastructure.Tests/ToochiChat.Infrastructure.Tests.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Infrastructure.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Tests.Shared/ToochiChat.Tests.Shared.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Tests.Shared/ToochiChat.Tests.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Tests.Shared/ToochiChat.Tests.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Tests.Shared/ToochiChat.Tests.Shared.csproj",
+        "projectName": "ToochiChat.Tests.Shared",
+        "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Tests.Shared/ToochiChat.Tests.Shared.csproj",
+        "packagesPath": "/Users/ulkiorra/.nuget/packages/",
+        "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/tests/ToochiChat.Tests.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
+          "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.API/ToochiChat.API.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.API/ToochiChat.API.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Mongo/ToochiChat.Persistence.Mongo.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Mongo/ToochiChat.Persistence.Mongo.csproj"
+              },
+              "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj": {
+                "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

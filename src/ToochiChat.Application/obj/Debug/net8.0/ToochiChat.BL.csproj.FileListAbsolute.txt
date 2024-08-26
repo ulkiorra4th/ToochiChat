@@ -1,0 +1,15 @@
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/bin/Debug/net8.0/ToochiChat.BL.deps.json
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/bin/Debug/net8.0/ToochiChat.BL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/bin/Debug/net8.0/ToochiChat.BL.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/bin/Debug/net8.0/ToochiChat.Domain.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/bin/Debug/net8.0/ToochiChat.Domain.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.csproj.AssemblyReference.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.AssemblyInfoInputs.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.AssemblyInfo.cs
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.csproj.CoreCompileInputs.cache
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.csproj.CopyComplete
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/refint/ToochiChat.BL.dll
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ToochiChat.BL.pdb
+/Users/ulkiorra/RiderProjects/ToochiChatAPI/ToochiChat.BL/obj/Debug/net8.0/ref/ToochiChat.BL.dll

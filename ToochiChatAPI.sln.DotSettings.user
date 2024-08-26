@@ -1,0 +1,28 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/CodeInspection/Roslyn/RoslynEnabled/@EntryValue">False</s:Boolean>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=07b2b29f_002Da362_002D4da5_002D8069_002Df095db1abda2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RegisterTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::326E292F-7D0E-4F51-A09C-AF72369D17B7::net8.0::ToochiChat.Infrastructure.Tests.EmailService.EmailConfirmationServiceTest.SendConfirmationEmailTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=12ca5392_002Dba0d_002D439f_002Dbe0c_002Df8f79024967b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=392aab41_002Dc174_002D48f6_002D80db_002D51893bc6d38a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SendConfirmationEmailTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::326E292F-7D0E-4F51-A09C-AF72369D17B7::net8.0::ToochiChat.Infrastructure.Tests.EmailService.EmailConfirmationServiceTest.SendConfirmationEmailTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=42b2d30b_002Df223_002D4edd_002Dab93_002Deda407291442/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="HtmlParserTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4deb333c_002D68ec_002D4cae_002Daf86_002D275a589e9e31/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SendConfirmationEmailTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::326E292F-7D0E-4F51-A09C-AF72369D17B7::net8.0::ToochiChat.Infrastructure.Tests.EmailService.EmailConfirmationServiceTest.SendConfirmationEmailTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::326E292F-7D0E-4F51-A09C-AF72369D17B7::net8.0::ToochiChat.Infrastructure.Tests.EmailService.HtmlParserTest.SecondParseArgumentExceptionTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::326E292F-7D0E-4F51-A09C-AF72369D17B7::net8.0::ToochiChat.Infrastructure.Tests.EmailService.HtmlParserTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Toochi/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

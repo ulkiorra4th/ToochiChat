@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5/qyD29UOBLOP+TMMh0Ct4mEpvsYBU+IWUJWVvu1ByBm3lTZG67amAvKmBpmF5H4YHlsG/v4Z59g89l6JHBmyw==",
+  "success": true,
+  "projectFilePath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/ulkiorra/.nuget/packages/csharpfunctionalextensions/2.41.0/csharpfunctionalextensions.2.41.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\ToochiChat.API\ToochiChat.API.csproj" />
+      <ProjectReference Include="..\..\src\ToochiChat.Application\ToochiChat.Application.csproj" />
+      <ProjectReference Include="..\..\src\ToochiChat.Domain\ToochiChat.Domain.csproj" />
+      <ProjectReference Include="..\..\src\ToochiChat.Infrastructure\ToochiChat.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\ToochiChat.Persistence.FileSystem\ToochiChat.Persistence.FileSystem.csproj" />
+      <ProjectReference Include="..\..\src\ToochiChat.Persistence.Mongo\ToochiChat.Persistence.Mongo.csproj" />
+      <ProjectReference Include="..\..\src\ToochiChat.Persistence.Postgres\ToochiChat.Persistence.Postgres.csproj" />
+    </ItemGroup>
+
+</Project>
