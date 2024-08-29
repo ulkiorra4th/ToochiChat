@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToochiChat.Persistence.Mongo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eeb807e3ccf5e34ffa9bf65a2b1bc3d934448790")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToochiChat.Persistence.Mongo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToochiChat.Persistence.Mongo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 using CSharpFunctionalExtensions;
+using Microsoft.Extensions.Options;
 using ToochiChat.Application.Interfaces.Infrastructure;
 using ToochiChat.Application.Interfaces.Persistence;
 using ToochiChat.Persistence.FileSystem.Options;
@@ -13,10 +14,10 @@ internal sealed class FileRepository : IFileRepository
     private readonly IHashingService _hashingService;
     private readonly FileRepositoryOptions _options;
 
-    public FileRepository(IHashingService hashingService, FileRepositoryOptions options)
+    public FileRepository(IHashingService hashingService, IOptions<FileRepositoryOptions> options)
     {
         _hashingService = hashingService;
-        _options = options;
+        _options = options.Value;
     }
 
     public async Task SaveFile(string fileName, byte[] data)
@@ -32,21 +33,12 @@ internal sealed class FileRepository : IFileRepository
         }
     }
 
-    public async Task<Result<MemoryStream>> GetFile(string fileName)
+    public Result<string> GetFile(string fileName)
     {
-        var dir = GetFileDirectoryPath(fileName);
-        if (!Directory.Exists(dir)) 
-            return Result.Failure<MemoryStream>($"File {fileName} doesn't exist");
-        
-        var fullPath = $"{dir}/{fileName}";
-        var stream = new MemoryStream();
-
-        using (var fs = File.Open(fullPath, FileMode.Open))
-        {
-            await fs.CopyToAsync(stream);
-        }
-
-        return stream;
+        var filePath = $"{GetFileDirectoryPath(fileName)}/{fileName}";
+        return !File.Exists(filePath) 
+            ? Result.Failure<string>($"File {fileName} doesn't exist") 
+            : filePath;
     }
 
     public async Task<Result> DeleteFile(string fileName)
@@ -66,6 +58,6 @@ internal sealed class FileRepository : IFileRepository
         var fileNameHash = _hashingService.GetMD5Hash(fileName);
         
         return $"{_options.BasePath}/{fileNameHash.Substring(0, FirstFolderNameLength)}/" +
-               $"{fileName.Substring(0, SecondFolderNameLength)}";
+               $"{fileNameHash.Substring(0, SecondFolderNameLength)}";
     }
 }

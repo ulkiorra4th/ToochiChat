@@ -11,13 +11,16 @@ internal static class Services
     
     static Services()
     {
-        var servicesBuilder = new ServicesBuilder("testsettings.json")
+        var servicesBuilder = new ServicesBuilder()
             .AddPasswordSecurityService()
             .AddDemoAccountRepository()
             .AddEmailService()
             .AddDemoJwtProvider()
             .AddApplicationServices()
-            .AddMemoryCache();
+            .AddMemoryCache()
+            .AddFilesRepository()
+            .AddHashingService()
+            .ConfigureTestInputDataOptions();
         
 #if USE_FAKE_EMAIL_VERIFICATION_SERVICE
         servicesBuilder

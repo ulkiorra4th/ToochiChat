@@ -39,7 +39,8 @@ public sealed class ChatController : Controller
     [HttpGet("{startPage}/{pagesCount}")]
     public async Task<IActionResult> GetChats(int startPage, int pagesCount)
     {
-        if (!ModelState.IsValid) return BadRequest();        
+        if (!ModelState.IsValid) return BadRequest();
+
         throw new NotImplementedException();
     }
     

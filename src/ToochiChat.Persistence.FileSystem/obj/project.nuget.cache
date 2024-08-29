@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "+21CJBRQ5J7wYqTEAqiqOXm139Ase8o+9rAniWXRAjLgEekCnwEAorhQGGYjJMZHp8kkQMIkRBmHE1X/w4h6qg==",
+  "dgSpecHash": "otKIcVvWRTUh/Lo4FUhtiuR6MhxH5+zBo4O9iU9AkBsWf3mt7zE1m6yPUyfsvpWmtwrhrfyhTsL2bTagXJyFAQ==",
   "success": true,
-  "projectFilePath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.FileSystem/ToochiChat.Persistence.FileSystem.csproj",
+  "projectFilePath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.FileSystem\\ToochiChat.Persistence.FileSystem.csproj",
   "expectedPackageFiles": [
-    "/Users/ulkiorra/.nuget/packages/csharpfunctionalextensions/2.41.0/csharpfunctionalextensions.2.41.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.options.configurationextensions/8.0.0/microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
-    "/Users/ulkiorra/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    "C:\\Users\\Рамин\\.nuget\\packages\\csharpfunctionalextensions\\2.41.0\\csharpfunctionalextensions.2.41.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Рамин\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

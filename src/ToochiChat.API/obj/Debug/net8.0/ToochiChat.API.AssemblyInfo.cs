@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("9c191822-fa40-4167-852e-bc3cc18a61dd")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToochiChat.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eeb807e3ccf5e34ffa9bf65a2b1bc3d934448790")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToochiChat.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToochiChat.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

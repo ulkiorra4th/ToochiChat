@@ -22,18 +22,19 @@ internal sealed class FileService : IFileService
             return Result.Failure<string>("Empty file data");
         
         var currentDateTime = DateTime.Now;
-        var fileName = $"{Guid.NewGuid().ToString().ToLower()} {currentDateTime.Date} - " +
-                       $"{currentDateTime.ToUniversalTime().ToShortTimeString()}.{contentType.ToLower()}";
+        var fileName = $"{Guid.NewGuid().ToString().ToLower()} {currentDateTime.Date.ToShortDateString()} - " +
+                       $"{currentDateTime.ToUniversalTime().ToShortTimeString().Replace(':', '-')}" +
+                       $".{contentType.ToLower()}";
 
         await _fileRepository.SaveFile(fileName, data);
         return fileName;
     }
 
-    public async Task<Result<MemoryStream>> GetFile(string fileName)
+    public Result<string> GetFile(string fileName)
     {
         return String.IsNullOrEmpty(fileName)
-            ? Result.Failure<MemoryStream>("Empty file name")
-            : await _fileRepository.GetFile(fileName);
+            ? Result.Failure<string>("Empty file name")
+            : _fileRepository.GetFile(fileName);
     }
 
     public async Task<Result> DeleteFile(string fileName)

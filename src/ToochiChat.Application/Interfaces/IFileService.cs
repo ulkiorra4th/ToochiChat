@@ -16,8 +16,8 @@ public interface IFileService
     /// Gets the file by name
     /// </summary>
     /// <param name="fileName">Name of the file</param>
-    /// <returns>MemoryStream</returns>
-    Task<Result<MemoryStream>> GetFile(string fileName);
+    /// <returns>full path to the file</returns>
+    Result<string> GetFile(string fileName);
 
     /// <summary>
     /// Deletes the file

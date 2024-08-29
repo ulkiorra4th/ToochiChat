@@ -11,7 +11,7 @@ internal static class Services
     
     static Services()
     {
-        var servicesBuilder = new ServicesBuilder("testsettings.json")
+        var servicesBuilder = new ServicesBuilder()
             .AddEmailService()
             .AddPasswordSecurityService()
             .AddMemoryCache();

@@ -23,4 +23,10 @@
       <ProjectReference Include="..\..\src\ToochiChat.Persistence.Postgres\ToochiChat.Persistence.Postgres.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="testsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

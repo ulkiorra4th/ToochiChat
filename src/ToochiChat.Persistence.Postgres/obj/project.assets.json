@@ -1238,20 +1238,21 @@
     ]
   },
   "packageFolders": {
-    "/Users/ulkiorra/.nuget/packages/": {}
+    "C:\\Users\\Рамин\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj",
+      "projectUniqueName": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Postgres\\ToochiChat.Persistence.Postgres.csproj",
       "projectName": "ToochiChat.Persistence.Postgres",
-      "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/ToochiChat.Persistence.Postgres.csproj",
-      "packagesPath": "/Users/ulkiorra/.nuget/packages/",
-      "outputPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Persistence.Postgres/obj/",
+      "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Postgres\\ToochiChat.Persistence.Postgres.csproj",
+      "packagesPath": "C:\\Users\\Рамин\\.nuget\\packages\\",
+      "outputPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Postgres\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ulkiorra/Documents/GitHub/ToochiChat/NuGet.Config",
-        "/Users/ulkiorra/.nuget/NuGet/NuGet.Config"
+        "E:\\GitHubProjects\\ToochiChat\\NuGet.Config",
+        "C:\\Users\\Рамин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1263,14 +1264,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj": {
-              "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Application/ToochiChat.Application.csproj"
+            "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Application\\ToochiChat.Application.csproj": {
+              "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Application\\ToochiChat.Application.csproj"
             },
-            "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj": {
-              "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Domain/ToochiChat.Domain.csproj"
+            "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Domain\\ToochiChat.Domain.csproj": {
+              "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Domain\\ToochiChat.Domain.csproj"
             },
-            "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj": {
-              "projectPath": "/Users/ulkiorra/Documents/GitHub/ToochiChat/src/ToochiChat.Infrastructure/ToochiChat.Infrastructure.csproj"
+            "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj": {
+              "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj"
             }
           }
         }
@@ -1279,6 +1280,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1322,7 +1328,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

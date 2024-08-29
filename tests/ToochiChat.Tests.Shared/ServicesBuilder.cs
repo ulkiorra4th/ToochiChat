@@ -10,6 +10,7 @@ using ToochiChat.Infrastructure.Extensions;
 using ToochiChat.Persistence.FileSystem.Extensions;
 using ToochiChat.Tests.Shared.DemoServices;
 using ToochiChat.Tests.Shared.Extensions;
+using ToochiChat.Tests.Shared.Options;
 
 namespace ToochiChat.Tests.Shared;
 
@@ -18,6 +19,12 @@ public sealed class ServicesBuilder
     private readonly IServiceCollection _services;
     private readonly IConfiguration _configuration;
 
+    public ServicesBuilder()
+    {
+        _services = new ServiceCollection();
+        _configuration = _services.AddConfiguration("testsettings.json");
+    }
+    
     public ServicesBuilder(string configurationFileName)
     {
         _services = new ServiceCollection();
@@ -99,7 +106,12 @@ public sealed class ServicesBuilder
     public ServicesBuilder AddDemoAccountRepository()
     {
         _services.TryAddSingleton<IAccountRepository, DemoAccountRepository>();
+        return this;
+    }
 
+    public ServicesBuilder ConfigureTestInputDataOptions()
+    {
+        _services.Configure<TestInputDataOptions>(_configuration.GetSection(nameof(TestInputDataOptions)));
         return this;
     }
 }
