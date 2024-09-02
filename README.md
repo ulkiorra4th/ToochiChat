@@ -14,6 +14,26 @@ Web-messenger. In development...
 - some feature
 - some feature
 
+## Stack
+
+* .NET 8
+* ASP.NET Core
+* EF Core
+* SignalR
+* [EazyMail](https://github.com/ulkiorra4th/EazyMail)
+* REST API
+* WebSockets
+* JWT Tokens
+* PostgreSQL
+* MongoDB
+* ElasticSearch
+* Kibana
+* Serilog
+* Swagger
+* XUnit
+* Docker Compose
+* Clean Architecture 
+* DDD
 
 ## Screenshots
 
