@@ -1,4 +1,4 @@
-namespace ToochiChat.Domain.Enums;
+namespace ToochiChat.Domain.Models.Chatting.Enums;
 
 public enum ReactionType
 {

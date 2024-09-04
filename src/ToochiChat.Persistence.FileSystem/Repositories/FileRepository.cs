@@ -36,8 +36,8 @@ internal sealed class FileRepository : IFileRepository
     public Result<string> GetFile(string fileName)
     {
         var filePath = $"{GetFileDirectoryPath(fileName)}/{fileName}";
-        return !File.Exists(filePath) 
-            ? Result.Failure<string>($"File {fileName} doesn't exist") 
+        return !File.Exists(filePath)
+            ? Result.Failure<string>($"File {fileName} doesn't exist")
             : filePath;
     }
 

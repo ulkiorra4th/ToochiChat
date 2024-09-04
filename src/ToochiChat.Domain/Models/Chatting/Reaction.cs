@@ -1,5 +1,5 @@
 using CSharpFunctionalExtensions;
-using ToochiChat.Domain.Enums;
+using ToochiChat.Domain.Models.Chatting.Enums;
 
 namespace ToochiChat.Domain.Models.Chatting;
 

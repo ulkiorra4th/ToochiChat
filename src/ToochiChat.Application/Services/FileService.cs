@@ -13,12 +13,12 @@ internal sealed class FileService : IFileService
         _fileRepository = fileRepository;
     }
 
-    public async Task<Result<string>> SaveFile(string contentType, byte[] data)
+    public async Task<Result<string>> SaveFile(string contentType, byte[]? data)
     {
         if (String.IsNullOrEmpty(contentType))
             return Result.Failure<string>("Empty file content type");
 
-        if (data.Length == 0)
+        if (data is null || data.Length == 0)
             return Result.Failure<string>("Empty file data");
         
         var currentDateTime = DateTime.Now;
@@ -42,12 +42,12 @@ internal sealed class FileService : IFileService
         return await _fileRepository.DeleteFile(fileName);
     }
 
-    public async Task<Result<string>> UpdateFile(string fileName, byte[] data)
+    public async Task<Result<string>> UpdateFile(string fileName, byte[]? data)
     {
         if (String.IsNullOrEmpty(fileName))
             return Result.Failure<string>("Invalid file name");
         
-        if (data.Length == 0)
+        if (data is null || data.Length == 0)
             return Result.Failure<string>("Empty file data");
 
         var deleteFileResult = await DeleteFile(fileName);

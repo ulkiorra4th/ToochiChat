@@ -10,13 +10,13 @@ public interface IFileService
     /// <param name="contentType">Type of the file</param>
     /// <param name="data">All file's bytes</param>
     /// <returns>The name of the saved file</returns>
-    Task<Result<string>> SaveFile(string contentType, byte[] data);
+    Task<Result<string>> SaveFile(string contentType, byte[]? data);
     
     /// <summary>
     /// Gets the file by name
     /// </summary>
     /// <param name="fileName">Name of the file</param>
-    /// <returns>full path to the file</returns>
+    /// <returns>file full name</returns>
     Result<string> GetFile(string fileName);
 
     /// <summary>

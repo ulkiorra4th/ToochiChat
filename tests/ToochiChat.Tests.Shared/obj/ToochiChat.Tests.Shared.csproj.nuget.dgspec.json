@@ -435,6 +435,9 @@
             "projectReferences": {
               "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Application\\ToochiChat.Application.csproj": {
                 "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Application\\ToochiChat.Application.csproj"
+              },
+              "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj": {
+                "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj"
               }
             }
           }
@@ -454,6 +457,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.28.0, )"

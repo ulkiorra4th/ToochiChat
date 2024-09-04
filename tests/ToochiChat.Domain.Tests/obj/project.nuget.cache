@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aNRD8CCplnUH2W2B4g2JYn7359NMNiKKwUTkwpd4CpA49jh2x3mY+MZXWZ41pgz4UsIzr7sWlGMiMeiiitx10Q==",
+  "dgSpecHash": "FRTVk9D5Go1SmW5S6eVpDAFEo6CTqpnTIhR0h90RYQW0h2j30eEhZfwhAiCi+vvGJka7ICo9BkFAATeqV2+CSg==",
   "success": true,
   "projectFilePath": "E:\\GitHubProjects\\ToochiChat\\tests\\ToochiChat.Domain.Tests\\ToochiChat.Domain.Tests.csproj",
   "expectedPackageFiles": [
