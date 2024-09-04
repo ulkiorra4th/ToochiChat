@@ -62,6 +62,8 @@ internal class ChatHub : Hub<IChatClient>
 
     public async Task SendMessage(MessageRequestModel model)
     {
+        // TODO: reafctor, add files sending
+        
         var membersResult = await _chatService.GetChatMembers(Guid.Parse(model.ChatId));
         if (membersResult.IsFailure) 
         { 
@@ -70,7 +72,7 @@ internal class ChatHub : Hub<IChatClient>
         }
 
         // TODO: replace ALL usernames by userID (GUID)!!!
-        var messageResult = Message.CreateNew(Guid.NewGuid(), model.Message.Text,
+        var messageResult = Message.CreateNew(Guid.NewGuid(), MessageContent.Create(model.Message.Text).Value,
             model.Message.SentDate);
         if (messageResult.IsFailure)
         {
@@ -85,7 +87,7 @@ internal class ChatHub : Hub<IChatClient>
             var clients = _usersConnections.GetConnections(userName);
             await Clients
                 .Clients(clients)
-                .ReceiveMessage(model.UserName, messageResult.Value.Content);
+                .ReceiveMessage(model.UserName, messageResult.Value.Content.Text);
         }
     }
 
