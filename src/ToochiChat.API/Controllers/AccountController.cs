@@ -105,7 +105,7 @@ public sealed class AccountController : Controller
             _logger.LogError(confirmResult.Error);
             return BadRequest(confirmResult.Error);
         }
-
+        
         return Ok(true);
     }
 }

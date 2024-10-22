@@ -15,20 +15,14 @@ internal sealed class ChatRepository : IChatRepository
     private readonly IServiceScopeFactory _scopeFactory;
 
     private readonly IMapper<Chat, ChatEntity> _chatMapper;
-    private readonly IMapper<Message, MessageEntity> _messageMapper;
-    
     private readonly ICollectionMapper<Chat, ChatEntity> _chatCollectionMapper;
-    private readonly ICollectionMapper<Message, MessageEntity> _messageCollectionMapper;
     private readonly ICollectionMapper<User, UserEntity> _userCollectionMapper;
 
-    public ChatRepository(IMapper<Chat, ChatEntity> chatMapper, ICollectionMapper<Chat, ChatEntity> chatCollectionMapper, 
-        IMapper<Message, MessageEntity> messageMapper, ICollectionMapper<Message, MessageEntity> messageCollectionMapper, 
+    public ChatRepository(IMapper<Chat, ChatEntity> chatMapper, ICollectionMapper<Chat, ChatEntity> chatCollectionMapper,
         ICollectionMapper<User, UserEntity> userCollectionMapper, IServiceScopeFactory scopeFactory)
     {
         _chatMapper = chatMapper;
         _chatCollectionMapper = chatCollectionMapper;
-        _messageMapper = messageMapper;
-        _messageCollectionMapper = messageCollectionMapper;
         _userCollectionMapper = userCollectionMapper;
         _scopeFactory = scopeFactory;
     }
@@ -40,11 +34,11 @@ internal sealed class ChatRepository : IChatRepository
         
         var chatEntity = await context.Chats
             .AsNoTracking()
-            .Include(chat => chat.Messages)
             .FirstOrDefaultAsync(chat => chat.Id == id);
 
-        if (chatEntity is null) return Result.Failure<Chat>($"chat with id {id} doesn't exist");
-        return Result.Success(_chatMapper.MapFrom(chatEntity));
+        return chatEntity is null 
+            ? Result.Failure<Chat>($"chat with id {id} doesn't exist") 
+            : Result.Success(_chatMapper.MapFrom(chatEntity));
     }
 
     public async Task<Result<Chat>> GetChatWithMembersById(Guid id)
@@ -54,12 +48,12 @@ internal sealed class ChatRepository : IChatRepository
         
         var chatEntity = await context.Chats
             .AsNoTracking()
-            .Include(chat => chat.Messages)
             .Include(chat => chat.Members)
             .FirstOrDefaultAsync(chat => chat.Id == id);
 
-        if (chatEntity is null) return Result.Failure<Chat>($"chat with id {id} doesn't exist");
-        return Result.Success(_chatMapper.MapFrom(chatEntity));
+        return chatEntity is null 
+            ? Result.Failure<Chat>($"chat with id {id} doesn't exist") 
+            : Result.Success(_chatMapper.MapFrom(chatEntity));
     }
 
     public async Task<Result<Guid>> Create(Chat chat)
@@ -79,9 +73,6 @@ internal sealed class ChatRepository : IChatRepository
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-        
-        var updatedMessagesEntity = 
-            _messageCollectionMapper.MapFrom(updatedChat.Messages.ToList());
 
         var updatedMembersEntity = 
             _userCollectionMapper.MapFrom(updatedChat.Members.ToList());
@@ -91,19 +82,8 @@ internal sealed class ChatRepository : IChatRepository
             .ExecuteUpdateAsync(chat => chat
                 .SetProperty(c => c.Title, updatedChat.Title)
                 .SetProperty(c => c.Members, updatedMembersEntity)
-                .SetProperty(c => c.Messages, updatedMessagesEntity)
-            );
+                );
 
-        return Result.Success();
-    }
-    
-    // TODO: finish it
-    public async Task<Result> AddMessageToChat(Message message)
-    {
-        using var scope = _scopeFactory.CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-        
-        await context.Messages.AddAsync(_messageMapper.MapFrom(message));
         return Result.Success();
     }
 
@@ -119,17 +99,18 @@ internal sealed class ChatRepository : IChatRepository
         return Result.Success();
     }
 
-    public async Task<Result<List<Chat>>> GetAll()
+    public async Task<Result<List<Chat>>> GetRange(int offset, int count)
     {
         using var scope = _scopeFactory.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
         
-        var chatEntities = await context.Chats
+        var allChatEntities = await context.Chats
             .AsNoTracking()
-            .Include(chat => chat.Messages)
             .ToListAsync();
-
+        
+        var chatEntities = allChatEntities.GetRange(offset, count);
         var chats = _chatCollectionMapper.MapFrom(chatEntities).ToList();
+        
         return Result.Success(chats);
     }
 }

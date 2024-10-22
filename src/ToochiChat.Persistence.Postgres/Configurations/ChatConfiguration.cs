@@ -16,9 +16,6 @@ internal sealed class ChatConfiguration : IEntityTypeConfiguration<ChatEntity>
         builder.Property(c => c.Title)
             .IsRequired();
 
-        builder.HasMany(c => c.Messages)
-            .WithOne(m => m.Chat);
-
         builder.HasMany(c => c.Members)
             .WithMany(u => u.Chats);
     }

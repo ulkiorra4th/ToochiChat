@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ToochiChat.Persistence.Postgres.Entities;
 
-// TODO: finish entity
 public sealed class ChatEntity
 {
     [Key] public Guid Id { get; set; }
@@ -10,5 +9,4 @@ public sealed class ChatEntity
     [Required, MaxLength(50)] public string? Title { get; set; }
     [Required] public DateTime CreationDate { get; set; }
     [Required] public ICollection<UserEntity>? Members { get; set; }
-    [Required] public ICollection<MessageEntity>? Messages { get; set; }
 }

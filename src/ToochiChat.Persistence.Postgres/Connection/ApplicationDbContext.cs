@@ -13,7 +13,6 @@ internal sealed class ApplicationDbContext : DbContext
     
     public DbSet<AccountEntity> Accounts { get; set; }
     public DbSet<ChatEntity> Chats { get; set; }
-    public DbSet<MessageEntity> Messages { get; set; }
     public DbSet<UserEntity> Users { get; set; }
 
     public ApplicationDbContext(IConfiguration configuration)
@@ -25,7 +24,6 @@ internal sealed class ApplicationDbContext : DbContext
     {
         modelBuilder.ApplyConfiguration(new AccountConfiguration());
         modelBuilder.ApplyConfiguration(new ChatConfiguration());
-        modelBuilder.ApplyConfiguration(new MessageConfiguration());
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         
         base.OnModelCreating(modelBuilder);

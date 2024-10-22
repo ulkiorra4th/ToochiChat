@@ -8,14 +8,11 @@ namespace ToochiChat.Persistence.Postgres.Mappers;
 public class ChatMapper : IMapper<Chat, ChatEntity>, ICollectionMapper<Chat, ChatEntity>
 {
     private readonly ICollectionMapper<User, UserEntity> _userCollectionMapper;
-    private readonly ICollectionMapper<Message, MessageEntity> _messageCollectionMapper;
     private readonly IMapper<User, UserEntity> _userMapper;
 
-    public ChatMapper(ICollectionMapper<User, UserEntity> userCollectionMapper, 
-        ICollectionMapper<Message, MessageEntity> messageCollectionMapper, IMapper<User, UserEntity> userMapper)
+    public ChatMapper(ICollectionMapper<User, UserEntity> userCollectionMapper, IMapper<User, UserEntity> userMapper)
     {
         _userCollectionMapper = userCollectionMapper;
-        _messageCollectionMapper = messageCollectionMapper;
         _userMapper = userMapper;
     }
 
@@ -25,8 +22,6 @@ public class ChatMapper : IMapper<Chat, ChatEntity>, ICollectionMapper<Chat, Cha
             other.CreationDate).Value;
 
         chat.AddMembers(_userCollectionMapper.MapFrom(other.Members!));
-        chat.AddMessages(_messageCollectionMapper.MapFrom(other.Messages!));
-
         return chat;
     }
 
@@ -39,7 +34,6 @@ public class ChatMapper : IMapper<Chat, ChatEntity>, ICollectionMapper<Chat, Cha
             CreationDate = other.CreationDate,
             Owner = _userMapper.MapFrom(other.Owner),
             Members = _userCollectionMapper.MapFrom(other.Members.ToList()),
-            Messages = _messageCollectionMapper.MapFrom(other.Messages.ToList())
         };
     }
 

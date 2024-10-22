@@ -5,7 +5,7 @@ using ToochiChat.Domain.Models;
 
 namespace ToochiChat.Application.Services;
 
-public sealed class UserService : IUserService
+internal sealed class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
     

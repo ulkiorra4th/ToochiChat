@@ -9,7 +9,6 @@ public interface IChatRepository
     Task<Result<Chat>> GetChatWithMembersById(Guid id);
     Task<Result<Guid>> Create(Chat chat);
     Task<Result> UpdateChatById(Guid id, Chat updatedChat);
-    Task<Result> AddMessageToChat(Message message);
     Task<Result> DeleteChatById(Guid id);
-    Task<Result<List<Chat>>> GetAll();
+    Task<Result<List<Chat>>> GetRange(int offset, int count);
 }

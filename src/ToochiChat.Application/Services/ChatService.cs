@@ -6,7 +6,7 @@ using ToochiChat.Domain.Models.Chatting;
 
 namespace ToochiChat.Application.Services;
 
-public sealed class ChatService : IChatService
+internal sealed class ChatService : IChatService
 {
     private readonly IChatRepository _chatRepository;
 
@@ -18,11 +18,6 @@ public sealed class ChatService : IChatService
     public async Task<Result<Chat>> GetChatById(Guid id)
     {
         return await _chatRepository.GetChatById(id);
-    }
-
-    public async Task<Result> SendMessageFrom(string accountId, string chatId, Message message)
-    {
-        throw new NotImplementedException();
     }
 
     public async Task<Result<IReadOnlyCollection<User>>> GetChatMembers(Guid chatId)

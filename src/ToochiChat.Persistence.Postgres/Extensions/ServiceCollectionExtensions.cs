@@ -29,10 +29,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddSingleton<IMapper<User, UserEntity>, UserMapper>();
         services.AddSingleton<ICollectionMapper<User, UserEntity>, UserMapper>();
-        
-        services.AddSingleton<IMapper<Message, MessageEntity>, MessageMapper>();
-        services.AddSingleton<ICollectionMapper<Message, MessageEntity>, MessageMapper>();
-        
+
         services.AddSingleton<IMapper<Chat, ChatEntity>, ChatMapper>();
         services.AddSingleton<ICollectionMapper<Chat, ChatEntity>, ChatMapper>();
         

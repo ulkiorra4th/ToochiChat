@@ -18,6 +18,7 @@
       <ProjectReference Include="..\ToochiChat.Application\ToochiChat.Application.csproj" />
       <ProjectReference Include="..\ToochiChat.Domain\ToochiChat.Domain.csproj" />
       <ProjectReference Include="..\ToochiChat.Infrastructure\ToochiChat.Infrastructure.csproj" />
+      <ProjectReference Include="..\ToochiChat.Persistence.Mongo\ToochiChat.Persistence.Mongo.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1602,7 +1602,8 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0",
           "ToochiChat.Application": "1.0.0",
           "ToochiChat.Domain": "1.0.0",
-          "ToochiChat.Infrastructure": "1.0.0"
+          "ToochiChat.Infrastructure": "1.0.0",
+          "ToochiChat.Persistence.Mongo": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ToochiChat.Persistence.Postgres.dll": {}

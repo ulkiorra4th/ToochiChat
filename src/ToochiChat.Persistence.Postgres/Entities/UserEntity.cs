@@ -12,5 +12,4 @@ public sealed class UserEntity
     [ForeignKey(nameof(Account))] public string? AccountId { get; set; }
     [Required] public AccountEntity? Account { get; set; }
     [Required] public ICollection<ChatEntity>? Chats { get; set; }
-    [Required] public ICollection<MessageEntity>? Messages { get; set; }
 }

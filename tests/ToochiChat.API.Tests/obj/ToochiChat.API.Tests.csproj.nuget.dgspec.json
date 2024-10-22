@@ -522,6 +522,9 @@
               },
               "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj": {
                 "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj"
+              },
+              "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj": {
+                "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj"
               }
             }
           }

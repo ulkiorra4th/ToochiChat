@@ -229,6 +229,87 @@
         }
       }
     },
+    "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj",
+        "projectName": "ToochiChat.Persistence.Mongo",
+        "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj",
+        "packagesPath": "C:\\Users\\Рамин\\.nuget\\packages\\",
+        "outputPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "E:\\GitHubProjects\\ToochiChat\\NuGet.Config",
+          "C:\\Users\\Рамин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Application\\ToochiChat.Application.csproj": {
+                "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Application\\ToochiChat.Application.csproj"
+              },
+              "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj": {
+                "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.28.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Postgres\\ToochiChat.Persistence.Postgres.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -261,6 +342,9 @@
               },
               "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj": {
                 "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Infrastructure\\ToochiChat.Infrastructure.csproj"
+              },
+              "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj": {
+                "projectPath": "E:\\GitHubProjects\\ToochiChat\\src\\ToochiChat.Persistence.Mongo\\ToochiChat.Persistence.Mongo.csproj"
               }
             }
           }

@@ -18,17 +18,16 @@ internal sealed class MessageService : IMessageService
 
     public async Task<Result> Create(Message message)
     {
-        if (message.Content.Files is not null)
-        {
-            foreach (var file in message.Content.Files)
-            {
-                var saveFileResult = await _fileService.SaveFile(file.Type, file.Data?.ToArray());
-                if (saveFileResult.IsFailure) return Result.Failure(saveFileResult.Error);
-
-                file.Rename(saveFileResult.Value);
-            }
-        }
+        if (message.Content.Files is null) return await _messageRepository.Create(message);
         
+        foreach (var file in message.Content.Files)
+        {
+            var saveFileResult = await _fileService.SaveFile(file.Type, file.Data?.ToArray());
+            if (saveFileResult.IsFailure) return Result.Failure(saveFileResult.Error);
+
+            file.Rename(saveFileResult.Value);
+        }
+
         return await _messageRepository.Create(message);
     }
 

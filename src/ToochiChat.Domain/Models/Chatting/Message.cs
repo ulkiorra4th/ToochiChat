@@ -9,26 +9,29 @@ public sealed class Message
 
     public ulong Id { get; }
     public Guid SenderId { get; }
+    public Guid ChatId { get; }
     public MessageContent Content { get; private set; }
     public IReadOnlyList<Reaction> Reactions => _reactions;
     public DateTime UpdateDate { get; private set; }
     public DateTime CreationDate { get; }
 
-    private Message(ulong id, Guid senderId, MessageContent content, DateTime creationDate, DateTime updateDate)
+    private Message(ulong id, Guid senderId, MessageContent content, DateTime creationDate, DateTime updateDate, 
+        Guid chatId)
     {
         Id = id;
         SenderId = senderId;
         Content = content;
         UpdateDate = updateDate;
+        ChatId = chatId;
         CreationDate = creationDate;
     }
 
-    public static Result<Message> Create(ulong id, Guid senderId, MessageContent content,
+    public static Result<Message> Create(ulong id, Guid senderId, Guid chatId, MessageContent content,
         DateTime creationDate, DateTime updateDate, List<Reaction>? reactions = null)
     {
         if (id <= default(ulong)) return Result.Failure<Message>($"{nameof(id)} should be gt {default(ulong)}");
 
-        var message = new Message(id, senderId, content, creationDate, updateDate);
+        var message = new Message(id, senderId, content, creationDate, updateDate, chatId);
         
         if (reactions != null)
             message.AddReactions(reactions);
@@ -36,10 +39,10 @@ public sealed class Message
         return Result.Success(message);
     }
     
-    public static Result<Message> CreateNew(Guid senderId, MessageContent content,
+    public static Result<Message> CreateNew(Guid senderId, Guid chatId, MessageContent content,
         DateTime creationDate)
     {
-        return Result.Success(new Message(0, senderId, content, creationDate, creationDate));
+        return Result.Success(new Message(0, senderId, content, creationDate, creationDate, chatId));
     }
     
     public Result UpdateContent(string? newText, List<FileInfo>? files = null)

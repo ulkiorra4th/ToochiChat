@@ -21,8 +21,5 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<UserEntity>
 
         builder.HasOne(u => u.Account)
             .WithOne(a => a.UserInfo);
-
-        builder.HasMany(u => u.Messages)
-            .WithOne(m => m.Sender);
     }
 }
