@@ -10,10 +10,19 @@ public sealed class User
     public string UserName { get; }
     public DateTime BirthDate { get; }
 
-    private User(string userName, DateTime birthDate)
+    private User(string userName)
     {
         UserName = userName;
+    }
+
+    private User(string userName, DateTime birthDate) : this(userName)
+    {
         BirthDate = birthDate;
+    }
+
+    private User(string userName, ulong userId) : this(userName)
+    {
+        UserId = userId;
     }
     
     private User(string userName, DateTime birthDate, ulong userId) : this(userName, birthDate)
@@ -38,5 +47,10 @@ public sealed class User
             return Result.Failure<User>($"age should be gt {UserConstants.MinAge}");
 
         return Result.Success(new User(UserConstants.DefaultUserName, birthDate));
+    }
+
+    public static Result<User> CreateReference(ulong userId)
+    {
+        return Result.Success(new User(String.Empty, userId));
     }
 }

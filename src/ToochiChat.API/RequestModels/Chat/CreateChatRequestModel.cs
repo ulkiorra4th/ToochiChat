@@ -1,6 +1,3 @@
 namespace ToochiChat.API.RequestModels.Chat;
 
-public class CreateChatRequestModel
-{
-    
-}
+public sealed record CreateChatRequestModel(string Title, DateTime CreationDate, ulong OwnerId);

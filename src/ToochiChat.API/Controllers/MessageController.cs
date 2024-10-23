@@ -18,5 +18,7 @@ public sealed class MessageController : Controller
         _logger = logger;
     }
     
-    
+    // TODO: create message
+    // TODO: update message
+    // TODO: delete message
 }

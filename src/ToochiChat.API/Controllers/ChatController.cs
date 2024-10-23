@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.FileProviders.Physical;
 using ToochiChat.API.RequestModels.Chat;
 using ToochiChat.Application.Interfaces;
+using ToochiChat.Domain.Models.Chatting;
 
 namespace ToochiChat.API.Controllers;
 
@@ -15,64 +14,102 @@ public sealed class ChatController : Controller
     private readonly ILogger<ChatController> _logger;
     private readonly IChatService _chatService;
     private readonly IMessageService _messageService;
-    private readonly IUserService _userService;
 
-    public ChatController(ILogger<ChatController> logger, IChatService chatService, IUserService userService, 
-        IMessageService messageService)
+    public ChatController(ILogger<ChatController> logger, IChatService chatService, IMessageService messageService)
     {
         _logger = logger;
         _chatService = chatService;
-        _userService = userService;
         _messageService = messageService;
     }
 
-    [HttpGet("{chatId}")]
+    [HttpGet("{chatId:guid}")]
     public async Task<IActionResult> GetChat(Guid chatId)
     {
         if (!ModelState.IsValid) return BadRequest();
-        
-        throw new NotImplementedException();
+
+        var chatResult = await _chatService.GetChatById(chatId);
+
+        if (chatResult.IsFailure)
+        {
+            _logger.LogError(chatResult.Error);
+            return Problem(chatResult.Error);
+        }
+
+        return Ok(chatResult.Value);
     }
 
-    [HttpGet("{id:guid}/{startPage:int}/{pagesCount:int}")]
-    public async Task<IActionResult> GetChat(Guid id, int startPage, int pagesCount)
-    {
-        if (!ModelState.IsValid) return BadRequest();        
-        throw new NotImplementedException();
-    }
-    
-    [HttpGet("{startPage:int}/{pagesCount:int}")]
-    public async Task<IActionResult> GetChats(int startPage, int pagesCount)
+    [HttpPost("list")]
+    public async Task<IActionResult> GetChats([FromBody] int startPage, [FromBody] int pagesCount)
     {
         if (!ModelState.IsValid) return BadRequest();
+        var chatsResult = await _chatService.GetRange(startPage, pagesCount);
 
-        throw new NotImplementedException();
-    }
-    
-    [HttpGet("user-chats/{userId:guid}/{startPage:int}/{pagesCount:int}")]
-    public async Task<IActionResult> GetUserChats([FromQuery] int startPage, [FromQuery] int pagesCount, 
-        [FromQuery] Guid userId)
-    {
-        if (!ModelState.IsValid) return BadRequest();        
-        throw new NotImplementedException();
+        if (chatsResult.IsFailure)
+        {
+            _logger.LogError(chatsResult.Error);
+            return Problem(chatsResult.Error);
+        }
+
+        return Ok(chatsResult.Value);
     }
 
     [HttpGet("{chatId:guid}/messages/{messageId}")]
     public async Task<IActionResult> GetChatMessage(Guid chatId, ulong messageId)
     {
-        throw new NotImplementedException();
+        if (!ModelState.IsValid) return BadRequest();
+
+        var messageResult = await _messageService.Get(chatId, messageId);
+
+        if (messageResult.IsFailure)
+        {
+            _logger.LogError(messageResult.Error);
+            return Problem(messageResult.Error);
+        }
+
+        return Ok(messageResult.Value);
     }
 
-    [HttpGet("{chatId:guid}/messages")]
-    public async Task<IActionResult> GetChatMessages(Guid chatId)
+    [HttpPost("{chatId:guid}/messages/list")]
+    public async Task<IActionResult> GetChatMessages(Guid chatId, ulong offset, ulong count)
     {
-        throw new NotImplementedException();
+        if (!ModelState.IsValid) return BadRequest();
+
+        var messagesResult = await _messageService.GetRange(chatId, offset, count);
+
+        if (messagesResult.IsFailure)
+        {
+            _logger.LogError(messagesResult.Error);
+            return Problem(messagesResult.Error);
+        }
+
+        return Ok(messagesResult.Value);
     }
 
-    [HttpPost("chat")]
+    [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateChatRequestModel model)
     {
-        if (!ModelState.IsValid) return BadRequest();        
+        if (!ModelState.IsValid) return BadRequest();
+
+        var owner = Domain.Models.User.CreateReference(model.OwnerId).Value;
+        var chatResult = Chat.Create(Guid.NewGuid(), model.Title, owner, model.CreationDate);
+
+        if (chatResult.IsFailure) return BadRequest(chatResult.Error);
+
+        var chatCreatedResult = await _chatService.Create(chatResult.Value);
+
+        if (chatCreatedResult.IsFailure)
+        {
+            _logger.LogError(chatCreatedResult.Error);
+            return Problem(chatCreatedResult.Error);
+        }
+
+        return Ok(chatResult.Value);
+    }
+
+    [HttpPut("{id:guid}")]
+    public async Task<IActionResult> Update([FromQuery] Guid id, [FromBody] UpdateChatRequestModel model)
+    {
+        if (!ModelState.IsValid) return BadRequest();
         throw new NotImplementedException();
     }
 
@@ -83,18 +120,10 @@ public sealed class ChatController : Controller
         throw new NotImplementedException();
     }
 
-    [HttpPut("edit-title/{id:guid}")]
-    public async Task<IActionResult> EditTitle([FromQuery] Guid id, [FromBody] EditChatTitleRequestModel model)
-    {
-        if (!ModelState.IsValid) return BadRequest();
-        throw new NotImplementedException();
-    }
-    
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> DeleteChat([FromQuery] Guid id, [FromBody] Guid userId)
     {
         if (!ModelState.IsValid) return BadRequest();
         throw new NotImplementedException();
     }
-    
 }

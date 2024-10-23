@@ -20,6 +20,26 @@ internal sealed class ChatService : IChatService
         return await _chatRepository.GetChatById(id);
     }
 
+    public async Task<Result<List<Chat>>> GetRange(int offset, int count)
+    {
+        return await _chatRepository.GetRange(offset, count);
+    }
+
+    public async Task<Result<Guid>> Create(Chat chat)
+    {
+        return await _chatRepository.Create(chat);
+    }
+
+    public async Task<Result> UpdateChatById(Guid id, Chat updatedChat)
+    {
+        return await _chatRepository.UpdateChatById(id, updatedChat);
+    }
+
+    public async Task<Result> DeleteChatById(Guid id)
+    {
+        return await _chatRepository.DeleteChatById(id);
+    }
+
     public async Task<Result<IReadOnlyCollection<User>>> GetChatMembers(Guid chatId)
     {
         var chatResult = await _chatRepository.GetChatWithMembersById(chatId);

@@ -18,7 +18,7 @@ public sealed class AccountController : Controller
     }
     
     /// <summary>
-    /// Logs in the user
+    /// Logs the user in
     /// </summary>
     /// <param name="request">Login model</param>
     /// <returns>JWT token in cookies</returns>
@@ -35,12 +35,12 @@ public sealed class AccountController : Controller
             return Problem();
         }
         
-        Response.Cookies.Append("some_name", tokenResult.Value);
+        Response.Cookies.Append("token", tokenResult.Value);
         return Ok();
     }
 
     /// <summary>
-    /// Logs user out
+    /// Logs the user out
     /// </summary>
     /// <param name="model">LogOut Request Model</param>
     /// <returns></returns>
@@ -68,7 +68,7 @@ public sealed class AccountController : Controller
             return Problem();
         }
         
-        Response.Cookies.Append("some_name", tokenResult.Value);
+        Response.Cookies.Append("token", tokenResult.Value);
         return Ok();
     }
 
@@ -106,6 +106,6 @@ public sealed class AccountController : Controller
             return BadRequest(confirmResult.Error);
         }
         
-        return Ok(true);
+        return Ok(confirmResult.Value);
     }
 }
