@@ -4,8 +4,11 @@
 
 # ToochiChat
 
-Web-messenger. In development...
+In development...
 
+**ToochiChat** is an innovative web messenger designed to bring people together through open communication. The standout feature of ToochiChat is its public chat rooms, allowing users to join and engage in conversations on a variety of topics as long as the chats are not private. 
+
+In addition to its unique public chat functionality, ToochiChat includes all the standard features you would expect from modern messaging platforms, such as direct messaging, multimedia sharing, and user-friendly interface. Whether you're looking to make new friends or discuss your interests with like-minded individuals, ToochiChat is the ideal platform for everyone!
 
 ## Features
 
