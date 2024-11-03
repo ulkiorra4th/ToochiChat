@@ -12,10 +12,15 @@ In addition to its unique public chat functionality, ToochiChat includes all the
 
 ## Features
 
-- some feature
-- some feature
-- some feature
-- some feature
+- public chats based on interests
+- temporary AI-generayed chats based on events happening in the world
+- chat recommendation system
+- chats with lifetime
+- top chats (trending chats)
+- private chats by invitation
+- role model of chat participants
+- media sharing
+- voice chats
 
 ## Stack
 
