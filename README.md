@@ -34,6 +34,7 @@ In addition to its unique public chat functionality, ToochiChat includes all the
 * JWT Tokens
 * PostgreSQL
 * MongoDB
+* Redis
 * ElasticSearch
 * Kibana
 * Serilog
