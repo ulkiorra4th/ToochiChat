@@ -72,18 +72,6 @@ In addition to its unique public chat functionality, ToochiChat includes all the
 
 
 
-## Usage/Examples
-
-```csharp
-public static class Program
-{
-    public static void Main()
-    {
-        
-    }
-}
-```
-
 
 ## Documentation
 
